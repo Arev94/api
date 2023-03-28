@@ -24,7 +24,7 @@ def test_update_product(app_config):
 
 
 def test_delete_product(app_config):
-    products = Products()
-    # product_id = products.
-    product_id = product_json.delete_product_json(1002)
-    assert products.delete_product(app_config.base_url, product_id).status_code == 200
+    product = Products()
+    id = product.find_id_by_name(app_config.base_url, "iphone 13")
+    json = product_json.update_product_json(id=id)
+    assert product.delete_product(app_config.base_url, json).status_code == 200

@@ -13,7 +13,7 @@ def create_product_json(name, description, price, category_id):
     return json_data
 
 
-def update_product_json(id, name, description, price, category_id):
+def update_product_json(id=None, name=None, description=None, price=None, category_id=None):
     data = {
         "id": id,
         "name": name,
